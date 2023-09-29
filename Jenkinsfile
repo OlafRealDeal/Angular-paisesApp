@@ -34,8 +34,9 @@ pipeline {
                 script {
                     // Ejecutar pruebas unitarias
                     bat 'ng test'
+                    echo 'Ejecución de Pruebas Completada'
                 }
-                echo 'Ejecución de Pruebas Completada'
+
             }
         }
 
