@@ -39,16 +39,16 @@ pipeline {
             }
         }
 
-        // stage('Publicar en Docker Hub') {
-        //     steps {
-        //         script {
-        //             // Construir la imagen Docker
-        //             bat 'docker build -t tu_usuario/tu_proyecto .'
-        //             // Publicar la imagen en Docker Hub (necesitas haber iniciado sesión antes)
-        //             bat 'docker push tu_usuario/tu_proyecto'
-        //         }
-        //     }
-        // }
+        stage('Publicar en Docker Hub') {
+            steps {
+                script {
+                    // Construir la imagen Docker
+                    bat 'docker build -t olafdev/tarea .'
+                    // Publicar la imagen en Docker Hub (necesitas haber iniciado sesión antes)
+                    bat 'docker push olafdev/tarea'
+                }
+            }
+        }
 
         stage('Desplegar Proyecto') {
             steps {
