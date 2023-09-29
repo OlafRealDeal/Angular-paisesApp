@@ -12,7 +12,10 @@ pipeline {
 
         stage('Instalar Dependencias') {
             steps {
-                sh 'npm install'
+                script {
+                    // Instalar dependencias usando npm
+                    sh 'npm install'
+                }
             }
         }
 
