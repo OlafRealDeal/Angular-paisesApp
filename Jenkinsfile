@@ -5,6 +5,7 @@ pipeline {
         stage('Clonar Repositorio') {
             steps {
                 script {
+                    // Clonar el repositorio desde GitHub
                     checkout scm
                 }
             }
@@ -14,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Instalar dependencias usando npm
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -23,7 +24,7 @@ pipeline {
             steps {
                 script {
                     // Compilar y construir la aplicación Angular
-                    sh 'ng build --prod'
+                    bat 'ng build --prod'
                 }
             }
         }
@@ -32,7 +33,7 @@ pipeline {
             steps {
                 script {
                     // Ejecutar pruebas unitarias
-                    sh 'ng test'
+                    bat 'ng test'
                 }
                 echo 'Ejecución de Pruebas Completada'
             }
@@ -42,9 +43,9 @@ pipeline {
         //     steps {
         //         script {
         //             // Construir la imagen Docker
-        //             sh 'docker build -t tu_usuario/tu_proyecto .'
+        //             bat 'docker build -t tu_usuario/tu_proyecto .'
         //             // Publicar la imagen en Docker Hub (necesitas haber iniciado sesión antes)
-        //             sh 'docker push tu_usuario/tu_proyecto'
+        //             bat 'docker push tu_usuario/tu_proyecto'
         //         }
         //     }
         // }
