@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     // Compilar y construir la aplicación Angular
-                    bat 'ng build --prod'
+                    bat 'ng build --configuration production'
                 }
             }
         }
