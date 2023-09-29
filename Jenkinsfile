@@ -34,6 +34,7 @@ pipeline {
                     // Ejecutar pruebas unitarias
                     sh 'ng test'
                 }
+                echo 'Ejecución de Pruebas Completada'
             }
         }
 
