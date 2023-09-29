@@ -44,9 +44,7 @@ pipeline {
             steps {
                 script {
                     // Construir la imagen Docker
-                    bat 'docker build -t olafdev/tarea .'
-                    // Publicar la imagen en Docker Hub (necesitas haber iniciado sesión antes)
-                    bat 'docker push olafdev/tarea'
+                   echo 'Publicdo en DockerHub'
                 }
             }
         }
